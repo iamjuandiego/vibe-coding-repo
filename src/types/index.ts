@@ -8,6 +8,10 @@ export interface ExperienceItem {
   company: string;
   title: string;
   details: string[];
+  subsections?: {
+    title: string;
+    details: string[];
+  }[];
 }
 
 export interface SkillItem {

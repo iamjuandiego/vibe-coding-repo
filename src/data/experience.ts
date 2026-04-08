@@ -2,12 +2,32 @@ import type { ExperienceItem } from "../types";
 
 export const experienceTimeline: ExperienceItem[] = [
   {
-    period: "2020 - 2021",
-    company: "Agency Right Now",
-    title: "Early Engineering Experience",
+    period: "2022 - Present",
+    company: "Babel + ING Bank",
+    title: "Senior Backend Engineer",
     details: [
-      "Built practical delivery habits in a collaborative setup with short release cycles.",
-      "Learned to work with shared code ownership and peer feedback."
+      "Leading a technical team to keep around 10 production assets fully operational, with at least one microservice under active ownership.",
+      "Responsible for reliability, observability, and delivery quality in a high-demand banking environment."
+    ],
+    subsections: [
+      {
+        title: "Swift",
+        details: [
+          "Contributed to Java messaging workflows and learned payment-domain constraints in production contexts."
+        ]
+      },
+      {
+        title: "Transaction Listing Movement",
+        details: [
+          "Maintained the ETR Java 8 monolith and supported decomposition into TRAPI and TRQUERY for clearer service boundaries."
+        ]
+      },
+      {
+        title: "On-call Team (2023 - Present)",
+        details: [
+          "24x7 rotations with incident response ownership, coordination through established runbooks, and focus on fast service recovery."
+        ]
+      }
     ]
   },
   {
@@ -15,23 +35,17 @@ export const experienceTimeline: ExperienceItem[] = [
     company: "Ingenia Malaga (Unicaja)",
     title: "Frontend to Backend Transition",
     details: [
-      "Contributed to Angular migration work (Explorer to Edge compatibility context).",
-      "Started transition toward backend responsibilities in banking environments."
+      "Contributed to Angular migration work in a banking context.",
+      "Started transitioning toward backend engineering responsibilities."
     ]
   },
   {
-    period: "2022 - Present",
-    company: "Babel + ING Bank",
-    title: "Senior Backend Engineer",
+    period: "2020 - 2021",
+    company: "Agency Right Now",
+    title: "Early Engineering Experience",
     details: [
-      "Swift Payments overlap context (2021-2022): worked on MTM messaging in Java while learning internal tooling and payment domain constraints.",
-      "Maintained ETR Java 8 monolith (F2E) with ingestion and consumption responsibilities for transaction listing.",
-      "Contributed as part of backend team to decomposition into TRAPI and TRQUERY.",
-      "Worked on AISCAF upstream integration used by Fintonic, BBVA, and TTPS; handled OMA, WARF, capacity planning, and night deployments aligned with CBS windows.",
-      "Observability ownership includes Grafana and Prometheus metrics, Kafka monitoring, and incident resolution.",
-      "On-call rotations since 2023 (24x7, 2 weeks), often in main backup role with incident handling through Teams.",
-      "Tech leadership in 2026: supported 2 junior engineers, 1 mid engineer, and 1 PO; drove vulnerability management via Checkmarx, dependency upgrades (Spring Boot / Merak), and reliability for around 10 microservices.",
-      "Real incident on April 1, 2026: buffered exception impacted transaction listing; system recovered in about one hour with coordinated team response."
+      "Built strong delivery habits in short release cycles.",
+      "Learned team collaboration through shared code ownership and peer feedback."
     ]
   }
 ];

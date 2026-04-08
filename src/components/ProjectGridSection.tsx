@@ -11,7 +11,7 @@ export default function ProjectGridSection(): JSX.Element {
       <div className="mb-8 flex items-end justify-between">
         <h2 className="text-3xl font-semibold text-white md:text-4xl">Projects</h2>
         <p className="max-w-xl text-sm text-white/60">
-          Real production systems, with clear responsibilities and team-based execution.
+          Production systems with clear ownership, measurable outcomes, and a reliability-first mindset.
         </p>
       </div>
       <div className="grid gap-5 md:grid-cols-2">
@@ -31,7 +31,7 @@ export default function ProjectGridSection(): JSX.Element {
               to={`/projects/${project.slug}`}
               className="mt-5 inline-block rounded-full border border-white/20 px-4 py-2 text-xs text-white transition hover:border-accent hover:text-accent"
             >
-              View Project Detail
+              View project details
             </Link>
           </motion.article>
         ))}

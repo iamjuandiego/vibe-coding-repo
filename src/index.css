@@ -36,3 +36,23 @@ body {
 .section-anchor {
   scroll-margin-top: 6rem;
 }
+
+@keyframes tech-ticker {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.tech-ticker-track {
+  will-change: transform;
+  animation: tech-ticker 28s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tech-ticker-track {
+    animation: none;
+  }
+}

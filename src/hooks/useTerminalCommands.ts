@@ -6,11 +6,12 @@ interface TerminalCommandResult {
 }
 
 const commandMap: Record<string, string> = {
-  help: "Available commands: contact, email, linkedin, clear",
+  help: "Available commands: contact, email, linkedin, instagram, book, clear",
   contact: "iamjuandiego: open to backend engineering conversations and team-focused opportunities.",
   email: "Email: hello@iamjuandiego.dev",
   linkedin: "LinkedIn: https://linkedin.com/in/iamjuandiego",
-  instagram: "Instagram: https://instagram.com/iamjuandiego"
+  instagram: "Instagram: https://instagram.com/iamjuandiego",
+  book: "Book: https://leanpub.com/comoserprogramador"
 };
 
 export function useTerminalCommands(): {

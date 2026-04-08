@@ -37,7 +37,7 @@ export default function ContactTerminal(): JSX.Element {
           <input
             value={value}
             onChange={(event) => setValue(event.target.value)}
-            placeholder="Type: contact, email, linkedin, instagram"
+            placeholder="Type: contact, email, linkedin, instagram, book"
             className="w-full rounded-xl border border-white/20 bg-black/40 px-4 py-3 text-sm text-white outline-none transition focus:border-accent"
           />
           <button className="rounded-xl bg-accent px-4 py-3 text-sm font-medium text-black">Run</button>

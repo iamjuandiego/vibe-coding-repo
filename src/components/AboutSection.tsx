@@ -14,16 +14,18 @@ export default function AboutSection(): JSX.Element {
         <h2 className="text-3xl font-semibold text-white md:text-4xl">About</h2>
         <div className="mt-6 space-y-4 text-base leading-relaxed text-white/75">
           <p>
-            I started with frontend migration work in banking projects and moved progressively into backend
-            engineering where I felt stronger impact around system behavior and reliability.
+            I am a backend engineer based in Malaga, focused on building stable systems that teams can trust in
+            production. I care about reliability, clear communication, and software that stays maintainable over
+            time.
           </p>
           <p>
-            Since then, I have worked on transaction systems, message flows, and operational support in real
-            production environments with strict deployment windows and shared team ownership.
+            My journey started in frontend migration projects and evolved naturally toward backend and distributed
+            systems. In banking environments, I have worked on transaction flows, integrations, and operational
+            support with demanding deployment windows.
           </p>
           <p>
-            My approach is simple: understand constraints, write maintainable code, monitor systems carefully,
-            and keep learning with the team.
+            Outside work, I am a father and someone who enjoys nature. That perspective helps me stay calm under
+            pressure and keep a practical, human approach to technical leadership.
           </p>
         </div>
       </div>

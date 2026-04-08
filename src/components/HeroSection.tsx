@@ -1,6 +1,4 @@
-import { motion } from "framer-motion";
-
-const techTicker = ["Java", "Spring Boot", "Kafka", "Cassandra", "Kubernetes", "OpenShift", "Azure DevOps", "ServiceNow", "Prometheus", "Grafana", "Checkmarx", "Dependency Management", "Monitoring", "Incident Handling", "OnCallTeams"];
+const techTicker = ["Java", "Spring Boot", "Kafka", "Cassandra", "Kubernetes", "OpenShift", "Azure DevOps", "ServiceNow", "Prometheus", "Grafana", "Checkmarx", "Dependency Management", "Monitoring", "Incident Handling", "On-call Team"];
 
 export default function HeroSection(): JSX.Element {
   return (
@@ -18,11 +16,7 @@ export default function HeroSection(): JSX.Element {
           architecture, service reliability, and practical observability under production constraints.
         </p>
         <div className="glass mt-10 overflow-hidden rounded-2xl p-4">
-          <motion.div
-            className="flex gap-3"
-            animate={{ x: ["0%", "-50%"] }}
-            transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
-          >
+          <div className="tech-ticker-track flex w-max gap-3">
             {[...techTicker, ...techTicker].map((item, idx) => (
               <span
                 key={`${item}-${idx}`}
@@ -31,7 +25,7 @@ export default function HeroSection(): JSX.Element {
                 {item}
               </span>
             ))}
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

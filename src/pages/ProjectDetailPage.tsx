@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import CodeSnippet from "../components/CodeSnippet";
 import Footer from "../components/Footer";
@@ -11,6 +12,10 @@ const projects = projectsJson as Project[];
 export default function ProjectDetailPage(): JSX.Element {
   const { slug } = useParams<{ slug: string }>();
   const project = projects.find((item) => item.slug === slug);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }, [slug]);
 
   if (!project) {
     return (

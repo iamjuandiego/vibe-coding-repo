@@ -23,6 +23,20 @@ export default function ExperienceTimelineSection(): JSX.Element {
                 <li key={detail}>- {detail}</li>
               ))}
             </ul>
+            {item.subsections && item.subsections.length > 0 ? (
+              <div className="mt-5 space-y-4">
+                {item.subsections.map((section) => (
+                  <div key={section.title} className="rounded-xl border border-white/10 bg-black/20 p-4">
+                    <h4 className="text-sm font-medium uppercase tracking-wide text-accent">{section.title}</h4>
+                    <ul className="mt-2 space-y-2 text-sm text-white/75">
+                      {section.details.map((detail) => (
+                        <li key={detail}>- {detail}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            ) : null}
           </motion.article>
         ))}
       </div>
