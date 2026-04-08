@@ -1,0 +1,96 @@
+[
+  {
+    "slug": "trapi",
+    "name": "TRAPI",
+    "shortSummary": "Transactions Repository API designed as part of monolith decomposition.",
+    "technicalDescription": "TRAPI serves normalized transaction records for downstream consumers with stable contracts and operational visibility.",
+    "architecture": [
+      "Event ingestion from Kafka topics",
+      "Harmonization layer for banking-specific payload normalization",
+      "Persistence model prepared for high-read transaction access patterns",
+      "Encrypted event publication for trusted consumers"
+    ],
+    "stack": ["Java", "Spring Boot", "Kafka", "Cassandra", "OpenShift", "Grafana"],
+    "outcomes": [
+      "Supported gradual migration from legacy ETR monolith into service-based boundaries.",
+      "Improved maintainability by isolating repository concerns from legacy components."
+    ],
+    "teamNote": "Developed with a backend squad. My role focused on migration tasks, API behavior discussions, and production hardening alongside teammates.",
+    "javaSnippet": "@KafkaListener(topics = \"trapi.ingestion\")\npublic void handleEvent(TransactionEvent event) {\n    var normalized = harmonizer.normalize(event);\n    repository.save(normalized);\n    publisher.publishEncrypted(normalized);\n}"
+  },
+  {
+    "slug": "trquery",
+    "name": "TRQUERY",
+    "shortSummary": "Transactions Query service focused on read models and query performance.",
+    "technicalDescription": "TRQUERY exposes query-oriented endpoints for transaction listing while preserving domain consistency and observability.",
+    "architecture": [
+      "Read-focused API endpoints over transaction repository",
+      "Separation from write/ingestion concerns",
+      "Monitoring for latency and error rates",
+      "Support for production-safe release cycles"
+    ],
+    "stack": ["Java", "Spring Boot", "Cassandra", "Prometheus", "Grafana", "Azure DevOps"],
+    "outcomes": [
+      "Helped transition transaction listing responsibilities away from monolith paths.",
+      "Reduced operational friction through clearer service ownership boundaries."
+    ],
+    "teamNote": "Built collaboratively inside the backend team. I contributed to query logic, integration behavior, and incident-oriented reliability work.",
+    "javaSnippet": "@GetMapping(\"/transactions\")\npublic Page<TransactionDto> listTransactions(QueryCriteria criteria) {\n    return queryService.fetch(criteria)\n        .map(mapper::toDto);\n}"
+  },
+  {
+    "slug": "aiscaf",
+    "name": "AISCAF",
+    "shortSummary": "Upstream banking integration service used by external and internal consumers.",
+    "technicalDescription": "AISCAF coordinates upstream data exchange under strict operational constraints and shared banking schedules.",
+    "architecture": [
+      "Upstream integration with controlled deployment windows",
+      "Capacity planning with OMA and WARF responsibilities",
+      "Operational dependency handling across consumer systems",
+      "Incident response alignment with on-call practices"
+    ],
+    "stack": ["Java", "Spring Boot", "ServiceNow", "OpenShift", "Grafana"],
+    "outcomes": [
+      "Sustained stable flows for consumers such as Fintonic, BBVA, and TTPS.",
+      "Improved release confidence through coordinated night deployment routines."
+    ],
+    "teamNote": "Operated by a cross-functional team. My contribution centered on operational readiness, deployment execution, and coordination across stakeholders.",
+    "javaSnippet": "public void scheduleNightDeployment(ReleasePlan plan) {\n    if (!cbsWindowValidator.isAllowed(plan.window())) return;\n    deploymentService.deploy(plan);\n    notifier.broadcastStatus(plan);\n}"
+  },
+  {
+    "slug": "devops-platform-maintenance",
+    "name": "DevOps Platform / Microservices Maintenance",
+    "shortSummary": "Reliability and maintenance ownership for approximately ten production microservices.",
+    "technicalDescription": "Day-to-day platform work spanning vulnerabilities, dependency updates, and incident-driven stabilization.",
+    "architecture": [
+      "CI/CD workflows in Azure DevOps",
+      "Security and vulnerability remediation with Checkmarx",
+      "Dependency upgrades for Spring Boot and Merak components",
+      "Metrics-driven maintenance via Grafana and Prometheus"
+    ],
+    "stack": ["Azure DevOps", "Spring Boot", "Checkmarx", "Prometheus", "Grafana", "ServiceNow"],
+    "outcomes": [
+      "Maintained service stability during frequent operational changes.",
+      "Improved response readiness during 24x7 on-call rotation periods."
+    ],
+    "teamNote": "This is shared platform work. I participate in planning and execution with engineers, PO, and operations; ownership is collective, not individual.",
+    "javaSnippet": "public void applySecurityPatch(DependencyUpgrade upgrade) {\n    validator.verifyCompatibility(upgrade);\n    pipeline.trigger(upgrade.serviceName());\n    monitoring.watchPostDeploy(upgrade.serviceName());\n}"
+  },
+  {
+    "slug": "swift-messaging",
+    "name": "Swift Messaging",
+    "shortSummary": "MTM Java messaging support in early banking backend phase.",
+    "technicalDescription": "Handled message processing tasks and learned internal financial tooling while contributing to team delivery.",
+    "architecture": [
+      "Message intake and validation pipelines",
+      "Domain-specific transformation for banking workflows",
+      "Operational coordination with senior engineers"
+    ],
+    "stack": ["Java", "Spring", "Messaging Middleware", "ServiceNow"],
+    "outcomes": [
+      "Built familiarity with banking systems under production constraints.",
+      "Contributed to stable message handling in shared delivery cycles."
+    ],
+    "teamNote": "This phase was highly collaborative. My role was supportive and execution-focused while learning domain patterns from the team.",
+    "javaSnippet": "public SwiftMessage process(SwiftMessage input) {\n    validator.validate(input);\n    return transformer.applyRules(input);\n}"
+  }
+]

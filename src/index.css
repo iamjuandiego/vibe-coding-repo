@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  font-family: Inter, "SF Pro Display", "SF Pro Text", system-ui, -apple-system, sans-serif;
+  background-color: #080a08;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #080a08;
+  background-image: radial-gradient(circle at 20% -10%, rgba(74, 222, 128, 0.12), transparent 40%);
+  color: #e5efe8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.glass {
+  @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-glow;
+}
+
+.section-anchor {
+  scroll-margin-top: 6rem;
+}
