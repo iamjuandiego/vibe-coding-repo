@@ -6,10 +6,15 @@ export const experienceTimeline: ExperienceItem[] = [
     company: "Babel + ING Bank",
     title: "Senior Backend Engineer",
     details: [
-      "Leading a technical team in Digital Experience Tribe to keep around 10 production assets fully operational, with at least one microservice under active ownership.",
-      "Responsible for reliability, observability, and delivery quality in a high-demand banking environment."
     ],
     subsections: [
+      {
+        title: "Microservices Management - The Orphanage - Digital Experience(2026 - Present)",
+        details: [
+          "Now Leading a technical team in Digital Experience Tribe to keep around 10 production assets fully operational, with at least one microservice under active ownership.",
+      "Responsible for reliability, observability, and delivery quality in a high-demand banking environment."
+        ]
+      },
       {
         title: "On-call Team 2(2023 - Present)",
         details: [
