@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const techTicker = ["Kafka", "Cassandra", "Kubernetes", "OpenShift", "Prometheus", "Grafana"];
+const techTicker = ["Java", "Spring Boot", "Kafka", "Cassandra", "Kubernetes", "OpenShift", "Azure DevOps", "ServiceNow", "Prometheus", "Grafana", "Checkmarx", "Dependency Management", "Monitoring", "Incident Handling", "OnCallTeams"];
 
 export default function HeroSection(): JSX.Element {
   return (
@@ -10,7 +10,7 @@ export default function HeroSection(): JSX.Element {
         <h1 className="max-w-4xl text-5xl font-semibold tracking-tight text-white md:text-7xl">
           iamjuandiego
           <span className="mt-4 block text-2xl font-medium text-white/70 md:text-4xl">
-            Senior Backend Engineer (Java / Spring Boot)
+            Senior Backend Engineer 
           </span>
         </h1>
         <p className="mt-8 max-w-3xl text-lg leading-relaxed text-white/75">
@@ -21,7 +21,7 @@ export default function HeroSection(): JSX.Element {
           <motion.div
             className="flex gap-3"
             animate={{ x: ["0%", "-50%"] }}
-            transition={{ repeat: Infinity, duration: 16, ease: "linear" }}
+            transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
           >
             {[...techTicker, ...techTicker].map((item, idx) => (
               <span
