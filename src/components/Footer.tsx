@@ -12,7 +12,7 @@ export default function Footer({ withHomeLink = false }: FooterProps): JSX.Eleme
         <div>
           <p className="text-sm text-white/90">iamjuandiego</p>
           <p className="text-xs text-white/55">
-            Built with Cursor, open-sourced on GitHub, deployed on Vercel, published on custom domain.
+            2020 - 2026 © iamjuandiego v2.
           </p>
         </div>
         <div className="flex items-center gap-4">
