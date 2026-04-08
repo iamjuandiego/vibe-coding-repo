@@ -1,17 +1,7 @@
 import { Link } from "react-router-dom";
-import { socialLinks } from "../data/social";
 
 interface NavbarProps {
   showBackHome?: boolean;
-}
-
-function SocialIcon({ label }: { label: string }): JSX.Element {
-  const initial = label[0] ?? "S";
-  return (
-    <span className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/20 text-xs text-white/85 transition hover:border-accent hover:text-accent">
-      {initial}
-    </span>
-  );
 }
 
 export default function Navbar({ showBackHome = false }: NavbarProps): JSX.Element {
