@@ -3,7 +3,7 @@ export default function KafkaFlowDiagram(): JSX.Element {
     <div className="glass mt-6 rounded-2xl p-5">
       <p className="mb-4 text-xs uppercase tracking-wide text-accent">Kafka Flow</p>
       <div className="grid gap-3 text-center text-xs text-white/80 md:grid-cols-4">
-        {["Producer", "Kafka Topic", "Harmonizer", "Cassandra + API"].map((step) => (
+        {["CORE-Extractor", "RabbitMQ", "Microservices", "Harmonizer & BBDD"].map((step) => (
           <div key={step} className="rounded-xl border border-white/15 bg-black/25 p-3">
             {step}
           </div>
