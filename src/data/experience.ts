@@ -6,26 +6,26 @@ export const experienceTimeline: ExperienceItem[] = [
     company: "Babel + ING Bank",
     title: "Senior Backend Engineer",
     details: [
-      "Leading a technical team to keep around 10 production assets fully operational, with at least one microservice under active ownership.",
+      "Leading a technical team in Digital Experience Tribe to keep around 10 production assets fully operational, with at least one microservice under active ownership.",
       "Responsible for reliability, observability, and delivery quality in a high-demand banking environment."
     ],
     subsections: [
       {
-        title: "Swift",
-        details: [
-          "Contributed to Java messaging workflows and learned payment-domain constraints in production contexts."
-        ]
-      },
-      {
-        title: "Transaction Listing Movement",
-        details: [
-          "Maintained the ETR Java 8 monolith and supported decomposition into TRAPI and TRQUERY for clearer service boundaries."
-        ]
-      },
-      {
-        title: "On-call Team (2023 - Present)",
+        title: "On-call Team 2(2023 - Present)",
         details: [
           "24x7 rotations with incident response ownership, coordination through established runbooks, and focus on fast service recovery."
+        ]
+      },
+      {
+        title: "Transaction Listing Movement - Thunder Transactions - Everyday Engagement(2023-2025)",
+        details: [
+          "Maintained the F2E legacy like ETR, Arrangement Java 8 monolith and supported decomposition into TRAPI and TRQUERY microservices with Java 17-21 and AISCAF development & maintenance, thanks to Aurelio Perez, Unai Garcia, Thunder Team and F2E Team."
+        ]
+      },
+      {
+        title: "Swift Payments - Chamanes - PowerOps(2022-2023",
+        details: [
+          "I Learning and Contributed to Java messaging workflows and learned payment-domain constraints in production contexts."
         ]
       }
     ]
