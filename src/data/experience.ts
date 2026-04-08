@@ -35,16 +35,16 @@ export const experienceTimeline: ExperienceItem[] = [
     ]
   },
   {
-    period: "2021 - 2022",
+    period: "2021",
     company: "Ingenia Málaga",
-    title: "Frontend",
+    title: "Full Stack Developer",
     details: [
-      "Contributed to Frontend migration work in a banking context.",
-      "Started transitioning toward backend engineering responsibilities."
+      "Contributed to Frontend migration work in a banking context with Angular.",
+      "Started transitioning toward backend engineering responsibilities with Java ."
     ]
   },
   {
-    period: "2020 - 2021",
+    period: "2020",
     company: "Agency Right Now",
     title: "Early Engineering Experience",
     details: [
