@@ -3,10 +3,9 @@ import type { ExperienceItem } from "../types";
 export const experienceTimeline: ExperienceItem[] = [
   {
     period: "2022 - Present",
-    company: "Babel + ING Bank",
+    company: "Babel",
     title: "Senior Backend Engineer",
-    details: [
-    ],
+    details: ["ING Bank"],
     subsections: [
       {
         title: "Microservices Management - The Orphanage - Digital Experience(2026 - Present)",
@@ -37,10 +36,10 @@ export const experienceTimeline: ExperienceItem[] = [
   },
   {
     period: "2021 - 2022",
-    company: "Ingenia Malaga (Unicaja)",
-    title: "Frontend to Backend Transition",
+    company: "Ingenia Málaga",
+    title: "Frontend",
     details: [
-      "Contributed to Angular migration work in a banking context.",
+      "Contributed to Frontend migration work in a banking context.",
       "Started transitioning toward backend engineering responsibilities."
     ]
   },
