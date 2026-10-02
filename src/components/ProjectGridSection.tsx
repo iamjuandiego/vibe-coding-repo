@@ -7,8 +7,8 @@ const projects = projectsJson as Project[];
 
 export default function ProjectGridSection(): JSX.Element {
   return (
-    <section id="projects" className="section-anchor mx-auto max-w-6xl px-6 py-16">
-      <div className="mb-8 flex items-end justify-between">
+    <section id="projects" className="section-anchor mx-auto max-w-6xl px-4 py-16 sm:px-6">
+      <div className="mb-8 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
         <h2 className="text-3xl font-semibold text-white md:text-4xl">Projects</h2>
         <p className="max-w-xl text-sm text-white/60">
           Production systems with clear ownership, measurable outcomes, and a reliability-first mindset.
@@ -18,10 +18,10 @@ export default function ProjectGridSection(): JSX.Element {
         {projects.map((project, idx) => (
           <motion.article
             key={project.slug}
-            className="glass rounded-2xl p-6"
+            className="glass rounded-2xl p-5 sm:p-6"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.15 }}
             transition={{ delay: idx * 0.06, duration: 0.4 }}
           >
             <h3 className="text-xl font-semibold text-white">{project.name}</h3>

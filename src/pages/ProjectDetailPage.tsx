@@ -19,10 +19,10 @@ export default function ProjectDetailPage(): JSX.Element {
 
   if (!project) {
     return (
-      <main className="min-h-screen bg-obsidian px-6 pt-28 text-white">
+      <main className="min-h-screen bg-obsidian px-4 pt-28 text-white sm:px-6">
         <Navbar showBackHome />
         <div className="mx-auto max-w-3xl">
-          <h1 className="text-4xl font-semibold">Project not found</h1>
+          <h1 className="text-3xl font-semibold sm:text-4xl">Project not found</h1>
           <p className="mt-4 text-white/70">The requested project does not exist.</p>
           <Link to="/" className="mt-6 inline-block text-accent">
             Back to Home
@@ -34,12 +34,12 @@ export default function ProjectDetailPage(): JSX.Element {
   }
 
   return (
-    <main className="min-h-screen bg-obsidian px-6 pt-28 text-white">
+    <main className="min-h-screen bg-obsidian px-4 pt-28 text-white sm:px-6">
       <Navbar showBackHome />
       <article className="mx-auto max-w-4xl">
         <p className="text-xs uppercase tracking-wide text-accent">Project Detail</p>
-        <h1 className="mt-3 text-4xl font-semibold md:text-5xl">{project.name}</h1>
-        <p className="mt-6 text-lg text-white/75">{project.technicalDescription}</p>
+        <h1 className="mt-3 break-words text-3xl font-semibold sm:text-4xl md:text-5xl">{project.name}</h1>
+        <p className="mt-6 text-base text-white/75 sm:text-lg">{project.technicalDescription}</p>
 
         <section className="mt-10">
           <h2 className="text-2xl">Architecture</h2>

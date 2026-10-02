@@ -9,16 +9,16 @@ const stackGroups: Array<{ title: string; items: string[] }> = [
 
 export default function TechStackSection(): JSX.Element {
   return (
-    <section className="section-anchor mx-auto max-w-6xl px-6 py-16">
+    <section className="section-anchor mx-auto max-w-6xl px-4 py-16 sm:px-6">
       <h2 className="text-3xl font-semibold text-white md:text-4xl">Tech Stack</h2>
       <div className="mt-8 grid gap-4 md:grid-cols-2">
         {stackGroups.map((group, index) => (
           <motion.div
             key={group.title}
-            className="glass rounded-2xl p-6"
+            className="glass rounded-2xl p-5 sm:p-6"
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 0.4, delay: index * 0.07 }}
           >
             <h3 className="text-lg text-white">{group.title}</h3>

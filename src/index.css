@@ -16,10 +16,12 @@ body,
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
   margin: 0;
+  overflow-x: clip;
   background-color: #080a08;
   background-image: radial-gradient(circle at 20% -10%, rgba(74, 222, 128, 0.12), transparent 40%);
   color: #e5efe8;
