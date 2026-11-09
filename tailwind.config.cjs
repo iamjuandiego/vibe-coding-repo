@@ -4,17 +4,25 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        obsidian: "#080a08",
-        panel: "#0f1410",
-        accent: "#4ade80",
-        accentSoft: "#86efac"
+        obsidian: "#07090f",
+        panel: "#0e121b",
+        accent: "#f59e0b",
+        accentSoft: "#fbbf24",
+        spaceBlue: "#1e3a5f",
+        missionRed: "#c2410c"
       },
       boxShadow: {
-        glow: "0 12px 50px rgba(74, 222, 128, 0.12)"
+        glow: "0 12px 50px rgba(245, 158, 11, 0.15)",
+        "glow-soft": "0 8px 30px rgba(245, 158, 11, 0.08)"
       },
       backgroundImage: {
         "premium-gradient":
-          "radial-gradient(circle at top left, rgba(74,222,128,0.16), transparent 45%), radial-gradient(circle at bottom right, rgba(22,163,74,0.12), transparent 40%)"
+          "radial-gradient(circle at top left, rgba(245,158,11,0.12), transparent 45%), radial-gradient(circle at bottom right, rgba(30,58,95,0.25), transparent 40%)",
+        "space-grid":
+          "linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)"
+      },
+      backgroundSize: {
+        "space-grid": "40px 40px"
       }
     }
   },
